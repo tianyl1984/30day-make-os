@@ -24,6 +24,10 @@ RESB 0x7dfe-$      ->   TIMES 0x1fe-($-$$) DB 0
 ALIGNB 16          ->   ALIGN 16, DB 0
 ```
 
+使用 `ORG   0x7c00` 代表程序从7c00装载,所以 `RESB 0x7dfe-$` 改为 `TIMES 0x1fe-($-$$) DB 0`
+
+$ 是当前位置 $$ 是段开始位置 $ - $$ 是当前位置在段内的偏移
+
 启动模拟器，加载镜像
 
 `qemu-system-x86_64 -m 32 -hda aaa.img`
@@ -31,5 +35,9 @@ ALIGNB 16          ->   ALIGN 16, DB 0
 修改文件
 
 `0x1fe-$` 修改为 `0x1fe-($-$$)`
+
+mac版、linux版tools下载地址
+
+`https://github.com/yourtion/YOS`
 
 
