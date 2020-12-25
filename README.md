@@ -40,4 +40,8 @@ mac版、linux版tools下载地址
 
 `https://github.com/yourtion/YOS`
 
+BIOS指令说明
+
+`http://oswiki.osask.jp/?%28AT%29BIOS`
+
 
